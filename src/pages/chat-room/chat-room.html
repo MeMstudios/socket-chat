@@ -35,7 +35,7 @@
 <ion-footer>
   <ion-toolbar>
     <ion-row class="message_row">
-      <ion-col col-12><ion-item>{{typeEvent.status}}</ion-item></ion-col>
+      <ion-col col-12><ion-item *ngIf="typeEvent.nickname !== nickname">{{typeEvent.status}}</ion-item></ion-col>
       <ion-col col-9>       
         <ion-item no-lines>
           <ion-input (keyup)="typing($event)" type="text" placeholder="Message" [(ngModel)]="message"></ion-input>
